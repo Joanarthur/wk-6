@@ -17,3 +17,13 @@ LEFT JOIN productlines pl
     ON p.productLine = pl.productLine;
 
 --Question 3
+SELECT o.orderDate, 
+       o.shippedDate, 
+       o.status, 
+       o.customerNumber
+FROM customers c
+RIGHT JOIN orders o
+    ON c.customerNumber = o.customerNumber
+LIMIT 10;
+
+
